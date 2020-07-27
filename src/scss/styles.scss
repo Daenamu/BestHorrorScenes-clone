@@ -178,7 +178,7 @@ main {
                 align-items: flex-end;
                 h2 {
                     font-size:$h2-portrait;
-                    width: 70%;
+                    width: 65%;
                 }
                 h5 {
                     width: 20%;
@@ -212,7 +212,7 @@ main {
                     align-items: flex-end;
                     h2 {
                         font-size:$h2-landscape;
-                        width: 70%;
+                        width: 65%;
                     }
                     h5 {
                         width: 20%;
@@ -247,6 +247,10 @@ main {
                     align-items: flex-end;
                     h2 {
                         font-size:$h2-landscape;
+                        width: 65%;
+                    }
+                    h5 {
+                        width: 20%;
                     }
                 }
             }
