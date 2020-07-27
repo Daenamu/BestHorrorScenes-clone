@@ -23,7 +23,7 @@ const styles = () =>
 const watch = () =>
     gulp.watch(routes.scss.watch, styles);
 
-const webserver = () => gulp.src("/").pipe(ws({livereload:true, open:true}));
+const webserver = () => gulp.src("build").pipe(ws({livereload:true, open:true}));
 
 const assets = gulp.series([styles]);
 const live = gulp.parallel([webserver, watch]);
