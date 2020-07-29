@@ -1,0 +1,259 @@
+@import "_variables.scss";
+
+* {
+    box-sizing:border-box;
+}
+html {
+    font-size: 10px;
+}
+html,body {
+    margin:0;
+    padding:0;
+    background-color: $white;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.description {
+    color: $red;
+    background-color: $white;
+    h1 {
+        margin: 0;
+        font-weight: 350;
+        transform-origin: 0% 50%;
+        transform: scaleX(1.5);
+    }
+    .bottom {
+        font-size: 1.5rem;
+        h3 {
+            font-size: $h3;
+            font-weight: 400;
+            padding: 0;
+            margin-bottom: 1em;
+        }
+        p {
+            padding: 0;
+            margin: 0;
+            font-size: 100%;
+            font-weight: 600;
+        }
+        nav {
+            margin-top: 2em;
+            ul {
+                margin:0;
+                padding:0;
+                display:flex;
+                flex-wrap: wrap;
+                li {
+                    color: black;
+                    opacity: 0.6;
+                    list-style-type:none;
+                    margin: 0 1em .5em 0;
+                    text-decoration: underline;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+main {
+    background-color: $red;
+    height: 100%;
+    .movie {
+        .wrapper {
+            &::before {
+                background-image: linear-gradient(rgba(0,0,0,.08),transparent);
+                content: "";
+                height: 100px;
+                left: 0;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+            width: 100%;
+            position: relative;
+            color: $white;
+            .movie__header {
+                padding-bottom: 18px;
+                h2 {
+                    margin: 0;
+                    transform-origin: 0% 50%;
+                    transform: scaleX(1.2);
+                    font-weight: 500;
+                }
+                h5 {
+                    margin: 0;
+                    font-size:$span;
+                    text-align: right;
+                }
+            }
+            .image {
+                background-color: $white;
+                width:100%;
+                height: 0;
+                overflow:hidden;
+                padding-bottom: 56.28%;
+                box-shadow: 0 80px 80px -80px #000, 0 0 12px rgba(0,0,0,.06), inset 0 0 0 1px rgba(0,0,0,.2);
+            }
+            footer {
+                padding-top: 18px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .fakebox {
+                    display:flex;
+                    align-items:center;
+                    span {
+                        font-size:$span;
+                        font-weight: 700;
+                        margin-right: 5px;
+                    }
+                    .recommend {
+                        display: flex;
+                        div {
+                            padding: 5px;
+                            display: flex;
+                            flex-direction: column;
+                            opacity: 0.7;
+                            font-size: 2rem;
+                            cursor:pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: $width-0) and (max-width: $width-1) {
+    .description {
+        width: 100%;
+        h1 {
+            padding: 10vh 0 24px 24px;
+            font-size: $h1__small;
+            line-height: 5rem;
+        }
+        .bottom {
+            padding: 36px;
+        }
+    }
+    .movie {
+        .wrapper {
+            padding: 36px;
+            .movie__header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h2 {
+                    font-size:$h2-portrait-small;
+                    display:block;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (min-width: $width-1) and (max-width: $width-2) {
+    .description {
+        width: 100%;
+        h1 {
+            padding: 10vh 0 48px 48px;
+            font-size: $h1__big;
+            line-height: 7rem;
+        }
+        .bottom {
+            padding: 72px;
+        }
+    }
+    .movie {
+        .wrapper {
+            padding: 72px;
+            .movie__header {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                h2 {
+                    font-size:$h2-portrait;
+                    width: 65%;
+                }
+                h5 {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $width-2) and (max-width: $width-3) {
+    .description {
+        width: $left-1;
+        height: 100vh;
+        position:fixed;
+        h1 {
+            padding: 10vh 0 48px 48px;
+            font-size: $h1__small;
+            line-height: 5rem;
+        }
+        .bottom {
+            padding: 72px;
+        }
+    }
+    main {
+        margin-left: $left-1;
+        .movie {
+            .wrapper {
+                padding: 36px;
+                .movie__header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    h2 {
+                        font-size:$h2-landscape;
+                        width: 65%;
+                    }
+                    h5 {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: $width-3) and (max-width: $width-4) {
+    .description {
+        height: 100vh;
+        width: $left-2;
+        position: fixed;
+        h1 {
+            padding: 10vh 0 48px 48px;
+            font-size: $h1__big;
+            line-height: 7rem;
+        }
+        .bottom {
+            padding: 72px;
+        }
+    }
+    main {
+        margin-left: $left-2;
+        .movie {
+            .wrapper {
+                padding: 72px;
+                .movie__header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-end;
+                    h2 {
+                        font-size:$h2-landscape;
+                        width: 65%;
+                    }
+                    h5 {
+                        width: 20%;
+                    }
+                }
+            }
+        }
+    }
+}
